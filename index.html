@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1 class="logo">Portfolio</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Pavani</span></h1>
+      <h2 id="typing"></h2>
+      <p> Passionate Frontend Developer skilled in building responsive,
+        user-friendly web applications using modern technologies.</p>
+      <p style="margin-top:10px; color:#aaa;">
+        🚀 Open to internships and full-time opportunities
+      </p>
+      <button class="btn" onclick="scrollToSection('contact')">Hire Me</button>
+
+      <button class="btn outline" onclick="scrollToSection('projects')">View Work</button>
+
+    </div>
+    <img src="images/home-img.jpg" alt="profile">
+  </section>
+
+  <!-- About -->
+
+  <section id="about" class="shows">
+    <h2 class="about-title">About Me</h2>
+
+    <div class="about-container">
+
+      <!-- LEFT CONTENT -->
+      <div class="about-left">
+        <p>
+          I'm Pavani, a passionate frontend developer who enjoys creating modern,
+          responsive, and user-friendly web applications.
+        </p>
+
+        <p>
+          I work with HTML, CSS, JavaScript, React, and Python, and I’m always
+          learning new technologies to stay updated.
+        </p>
+        <p>
+          My academic performance reflects my dedication — I currently hold a
+          <strong>B.Tech CGPA of 8.96</strong>.
+        </p>
+        <p>
+          My goal is to become a full-stack developer and build impactful
+          real-world solutions.
+        </p>
+      </div>
+
+      <!-- RIGHT CARDS -->
+      <div class="about-right">
+
+        <div class="about-card left">
+          <h3>💻 Frontend Development</h3>
+          <p>Building responsive and modern UI with clean code.</p>
+        </div>
+        <div class="about-card left">
+          <h3>⚡ Problem Solving</h3>
+          <p>Turning complex challenges into simple solutions.</p>
+        </div>
+        <div class="about-card right highlight">
+          <h3>🎓 Internship</h3>
+          <p>Infosys Springboard 6.0 – Autonomous Agent Dev.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!--Skills-->
+
+  <section id="skills" class="show">
+    <h2>Skills</h2>
+    <p style="color:#bbb; margin-top:-10px;">
+      Technologies I use to build scalable and modern applications
+    </p>
+    <div class="skills-container">
+
+      <!-- Frontend -->
+      <div class="skill-box">
+        <h3>Frontend</h3>
+        <div class="skill-items">
+          <div class="skill-card">
+            <div class="bar">
+              <div class="progress html"></div>
+            </div>
+            <i class="devicon-html5-plain colored"></i>
+            <p>HTML</p>
+          </div>
+          <div class="skill-card">
+            <div class="bar">
+              <div class="progress html"></div>
+            </div>
+            <i class="devicon-css3-plain colored"></i>
+            <p>CSS</p>
+          </div>
+          <div class="skill-card">
+            <div class="bar">
+              <div class="progress html"></div>
+            </div><i class="devicon-javascript-plain colored"></i>
+            <p>JavaScript</p>
+          </div>
+          <div class="skill-card">
+            <div class="bar">
+              <div class="progress html"></div>
+            </div><i class="devicon-react-original colored"></i>
+            <p>React</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="skill-box">
+        <h3>Backend</h3>
+        <div class="skill-items">
+          <div class="skill-card"><i class="devicon-python-plain colored"></i>
+            <p>Python</p>
+          </div>
+          <div class="skill-card"><i class="devicon-java-plain colored"></i>
+            <p>Java</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="skill-box">
+        <h3>Tools</h3>
+        <div class="skill-items">
+          <div class="skill-card"><i class="devicon-github-original"></i>
+            <p>GitHub</p>
+          </div>
+          <div class="skill-card"><i class="devicon-vscode-plain colored"></i>
+            <p>VS Code</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="show">
+    <h2>Projects</h2>
+    <p class="project-desc">
+      A user-friendly web project with a modern and responsive interface.
+    </p>
+    <div class="grid">
+
+      <div class="project">
+        <img src="images/Coffee.png">
+
+        <div class="overlay">
+          <h3>Coffee Website</h3>
+          <p>Built with HTML, CSS & JS</p>
+          <div class="project-buttons">
+            <button class="btn demo" onclick="openProject('https://pavani-coffee-project.netlify.app/')">
+              Live Demo
+            </button>
+
+            <button class="btn github" onclick="openProject('https://github.com/pavani976/Coffee-website')">
+              Code
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="images/image.png">
+        <div class="overlay">
+          <h3>Voice AI Assistant</h3>
+          <p>AI-based project</p>
+          <div class="project-buttons">
+            <button class="btn demo">
+              Live Demo
+            </button>
+            <button class="btn github" onclick="openProject('https://github.com/pavani976/Voice-AI-Assistent')">
+              Code
+            </button>
+          </div>
+          <!-- <button onclick="openProject('https://github.com/pavani976/Voice-AI-Assistent')">View Project</button> -->
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="images/weather.png">
+        <div class="overlay">
+          <h3>Weather App</h3>
+          <p>Built with HTML, CSS, Python, Flask and JS</p>
+          <div class="project-buttons">
+            <button class="btn demo" onclick="openProject('https://pavani-weather-forcast.netlify.app/')">
+              Live Demo
+            </button>
+
+            <button class="btn github" onclick="openProject('https://github.com/pavani976/Weather-Forcast')">
+              Code
+            </button>
+          </div>
+          <!-- <button onclick="openProject('https://github.com/pavani976/Weather-Forcast')">View Project</button> -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="contact-title">Contact Me</h2>
+
+    <!-- ONE MAIN CONTAINER -->
+    <div class="contact-box">
+
+      <!-- LEFT SIDE -->
+      <div class="contact-left">
+        <h3>Get in Touch</h3>
+        <p>I’m open to new opportunities and collaborations.</p>
+
+        <!-- Email -->
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <p style="padding-left: 20px;">gummadipudipavani@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h4 class="text">Phone</h4>
+            <p style="padding-left: 20px;">+91 7416488518</p>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h4>Location</h4>
+            <p style="padding-left: 20px;">India</p>
+          </div>
+        </div>
+
+        <!-- Follow Me -->
+        <h4 class="follow-text">Follow Me</h4>
+
+        <div class="social-icons">
+
+          <div class="icon-box">
+            <a href="https://www.linkedin.com/in/pavanigummadipudi/" target="_blank">
+              <i class="devicon-linkedin-plain"></i>
+            </a>
+            <span class="tooltip">LinkedIn</span>
+          </div>
+
+          <div class="icon-box">
+            <a href="https://github.com/pavani976" target="_blank">
+              <i class="devicon-github-original"></i>
+            </a>
+            <span class="tooltip">GitHub</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="contact-right">
+        <h3>Send Message</h3>
+
+        <form id="contact-form">
+
+          <div class="input-group">
+            <input type="text" name="user_name" required>
+            <label>Your Name</label>
+          </div>
+
+          <div class="input-group">
+            <input type="email" name="user_email" required>
+            <label>Your Email</label>
+          </div>
+
+          <div class="input-group">
+            <textarea name="message" required></textarea>
+            <label>Your Message</label>
+          </div>
+
+          <button class="btn">Send Message</button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+  <div id="popup">✅ Message Sent Successfully!</div>
+
+</body>
+
+</html>
