@@ -7,9 +7,8 @@
   <title>Portfolio</title>
 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="script.js" defer></script>
 </head>
@@ -18,7 +17,7 @@
 
   <!-- Navbar -->
   <nav>
-    <h1 class="logo">Portfolio</h1>
+    <h1 class="logo">👩‍💻 Pavani Sai</h1>
 
     <div class="menu-toggle" onclick="toggleMenu()">
       <i class="fas fa-bars"></i>
@@ -36,7 +35,7 @@
   <!-- Hero -->
   <section id="home" class="hero">
     <div class="hero-text">
-      <h1>Hi, I'm <span>Pavani</span></h1>
+      <h1>Hi, I'm <span>Pavani Sai</span></h1>
       <h2 id="typing"></h2>
 
       <p>
@@ -99,23 +98,19 @@
           <p>Infosys Springboard 6.0 – Autonomous Agent Dev.</p>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- Skills -->
+
   <section id="skills" class="show">
     <h2>Skills</h2>
-
     <p style="color:#bbb; margin-top:-10px;">
       Technologies I use to build scalable and modern applications
     </p>
-
     <div class="skills-container">
-
       <div class="skill-box">
         <h3>Frontend</h3>
-
         <div class="skill-items">
           <div class="skill-card">
             <div class="bar">
@@ -124,7 +119,6 @@
             <i class="devicon-html5-plain colored"></i>
             <p>HTML</p>
           </div>
-
           <div class="skill-card">
             <div class="bar">
               <div class="progress html"></div>
@@ -132,7 +126,6 @@
             <i class="devicon-css3-plain colored"></i>
             <p>CSS</p>
           </div>
-
           <div class="skill-card">
             <div class="bar">
               <div class="progress html"></div>
@@ -140,7 +133,6 @@
             <i class="devicon-javascript-plain colored"></i>
             <p>JavaScript</p>
           </div>
-
           <div class="skill-card">
             <div class="bar">
               <div class="progress html"></div>
@@ -150,115 +142,67 @@
           </div>
         </div>
       </div>
-
       <div class="skill-box">
         <h3>Backend</h3>
-
         <div class="skill-items">
           <div class="skill-card">
             <i class="devicon-python-plain colored"></i>
             <p>Python</p>
           </div>
-
           <div class="skill-card">
             <i class="devicon-java-plain colored"></i>
             <p>Java</p>
           </div>
         </div>
       </div>
-
       <div class="skill-box">
         <h3>Tools</h3>
-
         <div class="skill-items">
           <div class="skill-card">
             <i class="devicon-github-original"></i>
             <p>GitHub</p>
           </div>
-
           <div class="skill-card">
             <i class="devicon-vscode-plain colored"></i>
             <p>VS Code</p>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- Projects -->
+
+  <!--Projects-->
+  
   <section id="projects" class="show">
     <h2>Projects</h2>
-
     <p class="project-desc">
-      A user-friendly web project with a modern and responsive interface.
+      A collection of my recent web development projects.
     </p>
-
-    <div class="grid">
-
-      <div class="project">
-        <img src="images/Coffee.png" alt="Coffee Website">
-
-        <div class="overlay">
-          <h3>Coffee Website</h3>
-          <p>Built with HTML, CSS & JS</p>
-
-          <div class="project-buttons">
-            <button class="btn demo" onclick="openProject('https://pavani-coffee-project.netlify.app/')">
-              Live Demo
-            </button>
-
-            <button class="btn github" onclick="openProject('https://github.com/pavani976/Coffee-website')">
-              Code
-            </button>
-          </div>
+    <div class="project-slider">
+      <div class="project-info">
+        <h3 id="project-title"></h3>
+        <p id="project-description"></p>
+        <h4>Tools Used</h4>
+        <div id="project-tools"></div>
+        <div class="project-buttons">
+          <button class="btn demo" id="live-demo-btn">Live Demo</button>
+          <button class="btn github" id="code-btn">Code</button>
         </div>
       </div>
-
-      <div class="project">
-        <img src="images/voice.png" alt="Voice AI Assistant">
-
-        <div class="overlay">
-          <h3>Voice AI Assistant</h3>
-          <p>AI-based project</p>
-
-          <div class="project-buttons">
-            <button class="btn demo">Live Demo</button>
-
-            <button class="btn github" onclick="openProject('https://github.com/pavani976/Voice-AI-Assistent')">
-              Code
-            </button>
-          </div>
-        </div>
+      <div class="project-image">
+        <img id="project-img" src="" alt="Project Image">
       </div>
+    </div>
 
-      <div class="project">
-        <img src="images/agriflow.png" alt="AgriFlow Project">
-
-        <div class="overlay">
-          <h3>AgriFlow</h3>
-
-          <p>
-            Smart Agriculture Assistant built with React.js, Vite,
-            Node.js, Express.js, Tailwind CSS, Groq AI, Vercel and Render.
-          </p>
-
-          <div class="project-buttons">
-            <button class="btn demo" onclick="openProject('https://agriflow-frontend-mdvz.vercel.app')">
-              Live Demo
-            </button>
-
-            <button class="btn github" onclick="openProject('https://github.com/pavani976/Agriflow-Frontend')">
-              Frontend Code
-            </button>
-          </div>
-        </div>
-      </div>
-
+    <div class="slider-buttons">
+      <button class="btn outline" onclick="prevProject()">Previous</button>
+      <button class="btn" onclick="nextProject()">Next</button>
     </div>
   </section>
 
   <!-- Contact -->
+
   <section id="contact">
     <h2 class="contact-title">Contact Me</h2>
 
@@ -291,23 +235,25 @@
             <p>India</p>
           </div>
         </div>
-
         <h4 class="follow-text">Follow Me</h4>
-
         <div class="social-icons">
+
+          <!-- LinkedIn -->
           <div class="icon-box">
             <a href="https://www.linkedin.com/in/pavanigummadipudi/" target="_blank">
-              <i class="devicon-linkedin-plain"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <span class="tooltip">LinkedIn</span>
           </div>
 
+          <!-- GitHub -->
           <div class="icon-box">
             <a href="https://github.com/pavani976" target="_blank">
-              <i class="devicon-github-original"></i>
+              <i class="fab fa-github"></i>
             </a>
             <span class="tooltip">GitHub</span>
           </div>
+
         </div>
       </div>
 

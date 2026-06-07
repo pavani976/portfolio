@@ -369,7 +369,7 @@ nav ul li a.active::after {
 
 /* ================= PROJECTS ================= */
 
-.project-desc {
+/* .project-desc {
   font-size: 14px;
   color: #b6b1b1;
   margin-top: 6px;
@@ -492,6 +492,119 @@ nav ul li a.active::after {
 .btn.github:hover {
   background: linear-gradient(90deg, #4f9cff, #9b5cff);
   color: white;
+} */
+
+.project-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1150px;
+  margin: 10px auto 20px;
+  padding: 32px;
+  border-radius: 24px;
+  background: rgba(30, 41, 59, 0.55);
+  border: 1px solid rgba(79, 156, 255, 0.2);
+  box-shadow: 0 0 35px rgba(79, 156, 255, 0.12);
+}
+.project-desc {
+  font-size: 14px;
+  color: #b6b1b1;
+  margin-top: 1px;
+  text-align: center;
+}
+.project-info {
+  flex: 1;
+  text-align: left;
+}
+
+.project-info h3 {
+  font-size: 30px;
+  color: #edf1f6;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.project-info p {
+  color: #bbb;
+  line-height: 1.7;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.project-info h4 {
+  margin-top: 1px;
+  margin-bottom: 14px;
+  color: white;
+}
+
+#project-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#project-tools span {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: rgba(79, 156, 255, 0.12);
+  color: #4f9cff;
+  border: 1px solid rgba(79, 156, 255, 0.25);
+  font-size: 13px;
+}
+
+.project-image {
+  flex: 1;
+}
+
+.project-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(79, 156, 255, 0.25);
+  box-shadow: 0 20px 50px rgba(79, 156, 255, 0.25);
+}
+
+.slider-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .project-slider {
+    flex-direction: column-reverse;
+    gap: 25px;
+    padding: 22px;
+  }
+
+  .project-info {
+    text-align: center;
+  }
+
+  #project-tools {
+    justify-content: center;
+  }
+
+  .project-image img {
+    height: 220px;
+  }
+
+  .slider-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* keep side by side */
+    gap: 15px;
+    margin-top: 35px;
+  }
+
+  .slider-buttons .btn {
+    width: 130px;
+    margin-top: 0;
+  }
 }
 
 /* ================= CONTACT ================= */
@@ -797,29 +910,32 @@ nav ul li a.active::after {
     display: block;
   }
 
-  nav ul {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
+nav ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
 
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
 
-    background: rgba(11, 17, 32, 0.98);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(79, 156, 255, 0.18);
+  background: rgba(11, 17, 32, 0.98);
+  backdrop-filter: blur(18px);
 
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-  }
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
 
-  nav ul.active {
-    max-height: 380px;
-    padding: 16px 0;
-  }
+  border-bottom: none;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+nav ul.active {
+  max-height: 380px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(79, 156, 255, 0.18);
+}
 
   nav ul li {
     width: 100%;
